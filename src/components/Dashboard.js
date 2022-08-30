@@ -1,5 +1,11 @@
 import axios from 'axios'
 import { React, useState, useEffect } from 'react'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import {
+    faTrash,
+    faPencil,
+
+} from "@fortawesome/free-solid-svg-icons"
   
 
 
@@ -38,6 +44,8 @@ const Dashboard = () => {
                                 <td>{result.divisi}</td>
                                 <td>{result.tanggalmasuk}</td>
                                 <td>{result.statuskaryawan}</td>
+                                <td><button><FontAwesomeIcon icon={faPencil} size="sm" /></button>
+                                <button><FontAwesomeIcon icon={faTrash} size="sm" /></button></td>
                             </tr>
                         )
                     })}
